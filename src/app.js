@@ -25,7 +25,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
     res.send({
         location: "Wroclaw",
-        forecast: "Piździ"
+        forecast: "It's raining"
     });
 });
 
