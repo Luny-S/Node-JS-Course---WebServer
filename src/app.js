@@ -1,16 +1,15 @@
 const express = require('express');
-
-const app = express();
+const path = require('path');
 
 /**
  * app.com
  * app.com/help
  * app.com/about
  **/
+const app = express();
+const assetsPath = path.join(__dirname, '../public');
+app.use(express.static(assetsPath)); // customize server
 
-app.get('', (req, res) => {
-    res.send('<h1>Weather App</h1>');
-}); //gets partial URL (after app.com/)
 
 app.get('/about', (req, res) => {
     res.send("About<br>This is my about page for Weather app webpage for NodeJS course");
