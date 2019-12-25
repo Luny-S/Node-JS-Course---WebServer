@@ -1,6 +1,8 @@
 const request = require('request');
 const fs = require('fs');
 
+
+
 const forecast = (longitude, latitude, callback) => {
     // const authKeys = JSON.parse(fs.readFileSync('../auth_keys.json').toString());
     // const authKey_Darksky = authKeys.darksky;
@@ -21,7 +23,7 @@ const forecast = (longitude, latitude, callback) => {
         } else {
             const data = body.currently;
             callback(undefined, body.daily.data[0].summary + " It is currently " + data.temperature +
-                " degrees out. There is " + data.precipProbability + "% change of rain." );
+                " degrees out. The highest temp today is " + body.daily.data[0].temperatureHigh + " with a lowest of " + body.daily.data[0].temperatureLow + ". There is " + data.precipProbability + "% change of rain." );
         }
     });
 };
