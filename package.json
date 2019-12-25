@@ -1,0 +1,22 @@
+{
+  "name": "Node-JS-Course---WebServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "url": "https://github.com/olek130/Node-JS-Course---WeatherApp"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/node": "^12.12.14"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "hbs": "^4.0.6",
+    "request": "^2.88.0"
+  }
+}
