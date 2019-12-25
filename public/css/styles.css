@@ -28,7 +28,7 @@ header {
 }
 
 header a {
-    color: lightblue;
+    color: #888888;
     margin-right: 16px;
     text-decoration: none;
 }
@@ -38,11 +38,23 @@ header a {
 }
 
 h1 {
-    color: brown;
     font-size: 64px;
     margin-bottom: 16px;
 }
 
 img {
     width: 20%;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
 }
