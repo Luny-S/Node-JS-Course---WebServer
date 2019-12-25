@@ -2,8 +2,9 @@ const request = require('request');
 const fs = require('fs');
 
 const geocode = (address, weatherCallback) => {
-    const authKeys = JSON.parse(fs.readFileSync('../auth_keys.json').toString());
-    const authKey_Mapbox = authKeys.mapbox;
+    // const authKeys = JSON.parse(fs.readFileSync('../auth_keys.json').toString());
+    // const authKey_Mapbox = authKeys.mapbox;
+    const authKey_Mapbox = "pk.eyJ1Ijoib2xlazEzMCIsImEiOiJjazQxM3VnenowN3dyM21wb2tyd2NpY2NlIn0.qvlyEFThYjINM4nPf-QBNA";
 
     let url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(address) + ".json?";
     url += "access_token=" + authKey_Mapbox;

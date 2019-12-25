@@ -2,8 +2,11 @@ const request = require('request');
 const fs = require('fs');
 
 const forecast = (longitude, latitude, callback) => {
-    const authKeys = JSON.parse(fs.readFileSync('../auth_keys.json').toString());
-    const authKey_Darksky = authKeys.darksky;
+    // const authKeys = JSON.parse(fs.readFileSync('../auth_keys.json').toString());
+    // const authKey_Darksky = authKeys.darksky;
+
+    const authKey_Darksky = "e2066c01b4582d62269c45838864a7d5";
+
     let url = "https://api.darksky.net/forecast/";
     url += authKey_Darksky + "/";
     url += latitude + "," + longitude;
